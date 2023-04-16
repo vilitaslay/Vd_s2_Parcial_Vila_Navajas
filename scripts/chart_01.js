@@ -1,4 +1,4 @@
-d3.csv('data/147_desratizacion_nuevo.csv.csv', d3.autoType).then(data => {
+d3.csv('147_desratizacion_nuevo.csv', d3.autoType).then(data => {
     console.log(data)
 
     let chart = Plot.plot({
