@@ -10,7 +10,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
         d.properties.DENUNCIAS = cantReclamos
     
         console.log(nombreBarrio + ': ' + cantReclamos)
-      })
+    })
     
     let chart = Plot.plot({
         projection : {
@@ -24,19 +24,12 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
             range: [0, 30],
         },
         marks : [
-            Plot.dot(
-                barrios.features,
-                Plot.centroid({
-                  r: d => d.properties.DENUNCIAS,
-                  text: (d) => d.properties.BARRIO,
-                  stroke: 'none',
-                  fill: d => d.properties.DENUNCIAS > 80 ? '#af0000' : '#feca54'
-                })
-              ),
-            Plot.geo(barrios, {
-                stroke: 'gray',
-                title: d => `${d.properties.BARRIO}\n${d.properties.DENUNCIAS} denuncias`,
-            })
+            Plot.dot(data, plot.group({fill:'count'}, {
+                x: 'lat',
+                y: 'lon',
+                fill: 'prestacion'
+            })),
+            Plot.geo(barrios)
         ],
     })
     d3.select('#chart02').append(() => chart)

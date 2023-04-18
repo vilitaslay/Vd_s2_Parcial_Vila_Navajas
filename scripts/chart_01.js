@@ -1,12 +1,13 @@
-d3.csv('147_desratizacion_nuevo.csv', d3.autoType).then(data => {
+d3.csv('data/147_desratizacion_nuevo.csv', d3.autoType).then(data => {
     console.log(data)
 
     let chart = Plot.plot({
       height: 640,
-      padding: 0.5,
+      width: 640,
+      padding: 0.3,
       grid: true,
       x: {
-        axis: "top",
+        axis: 'top',
         label: "Hora del Dia"
       },
       y : {
@@ -17,12 +18,14 @@ d3.csv('147_desratizacion_nuevo.csv', d3.autoType).then(data => {
           x: 'hora_new',
           y: 'domicilio_barrio',
           fill: 'prestacion',
-          fillOpacity: 0.25,
+          fillOpacity: 1,
         })),
-
-        
-      ]
+      ],
+      color : {
+        scheme: 'orrd',
+        legend: true,
+      }
     })
     
-    d3.select('#chart').append(() => chart)
+    d3.select('#chart01').append(() => chart)
 })
