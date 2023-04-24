@@ -14,7 +14,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       scheme: 'ylorbr',
     },
     marks: [
-      Plot.density(data, { x: 'lon', y: 'lat', fill: 'density',bandwidth: 15, thresholds: 30 }),
+      Plot.dot(data, { x: 'lon', y: 'lat', fill: "estado_del_contacto"}),
       Plot.geo(barrios, {
         stroke: 'gray',
         title: d => `${d.properties.BARRIO}\n${d.properties.DENUNCIAS} denuncias`,
