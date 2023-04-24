@@ -12,7 +12,7 @@ Promise.all([mapaFetch2, dataFetch2]).then(([barrios, data]) => {
       legend: true,
     },
     marks: [
-      Plot.dot(data, { x: 'lon', y: 'lat', fill: 'canal', fillOpacity: 0.4, r:5}),
+      Plot.dot(data, { x: 'lon', y: 'lat', fill: d => ((d.canal == 'App BA 147'|| d.canal == 'GCS Web')  ? 'purple' : 'gold'), fillOpacity: 0.4, r: d => ((d.canal == 'App BA 147'|| d.canal == 'GCS Web') ? 20 : 10)}),
       Plot.geo(barrios, {
         stroke: 'gray',
         strokeWidth: 2,
