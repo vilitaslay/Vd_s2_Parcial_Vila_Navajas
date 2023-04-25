@@ -6,37 +6,98 @@
 */
 
 * {
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family:'Times New Roman', Times, serif
+}
+body {
+    margin: 40px;
 }
 /*Titulos*/
 header {
     background-color: #C4195D;
     color: white;
-    padding: 20px;
     text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    margin: -8px;
+    margin-left: -48px;
+    padding: 15px;
 }
+
+header ul li {
+    float: left;
+    padding-right: 20px;
+    align-items: center;
+}
+
 h1 {
     font-size: 40px;
-    margin: 0.5em;
-    margin-right: 150px;
+
 }
 
 h3 {
+    font-family: 'Times New Roman', Times, serif;
     margin-top: 50px;
-    font-size: 20px;
+    font-size: 25px;
     color: #C4195D;
+    font-weight: bold;
 }
+
 ::marker {
     color: transparent;
 }
 
+/*Cambios particulares*/
+#marca{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+
+#bajada {
+    color: rgb(169, 169, 169);
+    font-weight: 100;
+    font-size: 18px;
+    margin-top: -25px;
+}
+#buscador {
+    position: relative;
+    margin: 60px;
+    margin-left: 200px;
+    background-color: white;
+    color: grey;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    border-color: white;
+    border-radius: 25px;
+    width: 400px;
+    text-align: left;
+}
+#lupita {
+    color: grey;
+    margin-left: 320px;
+}
 #chart01 svg, #chart02 svg, #chart03 svg {
     max-width: initial;
     margin-top: 3em;
     margin-bottom: 3em;
     background-color: transparent; 
 }
+
 img {
-    height:50px;
-    width: 50px;
+    height:150px;
+    width: 150px;
+    margin: 10px;
+    margin-top: 0px;;
+
+}
+#center.ytd-masthead {
+    display: flexbox;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 0 1 728px;
+    min-width: 0px;
 }

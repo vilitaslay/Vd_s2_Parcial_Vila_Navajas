@@ -8,6 +8,7 @@ d3.dsv(';', 'data/147_desratizacion.csv', d3.autoType).then(data => {
       grid: true,
       marginTop: 50,
       marginLeft: 150,
+      insetRight: 40,
       x : {
         label: 'Estado del contacto'
       },
@@ -21,7 +22,14 @@ d3.dsv(';', 'data/147_desratizacion.csv', d3.autoType).then(data => {
             fill: d => (d.domicilio_barrio == 'PALERMO' ? '#C4195D': 'grey'),
             stroke: d => (d.domicilio_barrio == 'PALERMO' ? '#C4195D': 'grey'),
             sort : {y: 'x', reverse : true}
-            
+        })),
+        Plot.text(data.filter(d => d.estado_del_contacto == "Abierto"), Plot.group({x: 'count'}, {
+          x: 'canal',
+          y: 'domicilio_barrio',
+          text: ['126'],
+          fill: '#c4195d',
+          dy: -628,
+          dx: 1735,
         })),
       ],
       color : {

@@ -13,7 +13,7 @@ d3.dsv(';', 'data/147_desratizacion.csv', d3.autoType).then(data => {
       padding: 0.1,
       grid: true,
       marginTop: 50,
-      marginLeft: 150,
+      marginLeft: 120,
       x: {
         axis: 'top',
         labelOffset: 50,
