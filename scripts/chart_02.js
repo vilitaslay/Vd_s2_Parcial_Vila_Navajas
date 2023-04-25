@@ -12,7 +12,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       legend: true,
     },
     marks: [
-      Plot.density(data, { x: 'lon', y: 'lat', fill: d => (d.estado_del_contacto == 'Abierto' ? 'purple' : 'transparent'), bandwidth: 15, thresholds: 15, fillOpacity: 0.15}),
+      Plot.density(data, { x: 'lon', y: 'lat', fill: d => (d.estado_del_contacto == 'Abierto' ? '#C4195D' : 'transparent'), bandwidth: 15, thresholds: 15, fillOpacity: 0.15}),
       Plot.geo(barrios, {
         stroke: 'gray',
         strokeWidth: 2,

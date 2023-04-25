@@ -1,4 +1,10 @@
-d3.csv('data/147_desratizacion_nuevo.csv', d3.autoType).then(data => {
+d3.dsv(';', 'data/147_desratizacion.csv', d3.autoType).then(data => {
+    data.forEach(item => {
+    let horaIngresoCompleta = d3.timeParse('%H:%M:%S')(item.hora_ingreso)
+    let horaIngreso = horaIngresoCompleta.getHours()
+        item.solo_hora_ingreso = horaIngreso
+    }),
+
     console.log(data)
 
     let chart = Plot.plot({
@@ -14,11 +20,11 @@ d3.csv('data/147_desratizacion_nuevo.csv', d3.autoType).then(data => {
         label: "Hora del Dia"
       },
       y : {
-        label: "Barrio"
+        label: null
       },
       marks : [
         Plot.cell(data, Plot.group({fill: "count"}, {
-          x: 'hora_new',
+          x: 'solo_hora_ingreso',
           y: 'domicilio_barrio',
           fill: 'prestacion',
           fillOpacity: 1,
