@@ -8,36 +8,26 @@
 * {
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
-body {
-}
-
 /*Titulos*/
+header {
+    background-color: #C4195D;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 h1 {
     font-size: 40px;
     margin: 0.5em;
     margin-right: 150px;
 }
-h2 {
 
-}
 h3 {
     margin-top: 50px;
     font-size: 20px;
     color: #C4195D;
 }
-li {
-    
-}
 ::marker {
     color: transparent;
-}
-nav {
-    float: left;
-}
-nav ul li{
-    float: left;
-    font-size: 20px;
-    margin: 0.1em;
 }
 
 #chart01 svg, #chart02 svg, #chart03 svg {
@@ -45,16 +35,6 @@ nav ul li{
     margin-top: 3em;
     margin-bottom: 3em;
     background-color: transparent; 
-}
-
-/* .chart {
-} */
-
-.header {
-    color: white;
-    background-color: #C4195D;
-    position: fixed;
-    size: 100;
 }
 img {
     height:50px;
