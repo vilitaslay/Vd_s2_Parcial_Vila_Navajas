@@ -2,8 +2,8 @@ d3.dsv(';', 'data/147_desratizacion.csv', d3.autoType).then(data => {
   console.log(data)
 
     let chart = Plot.plot({
-      height: 800,
-      width: 2000,
+      height: 500,
+      width: 1100,
       padding: 0.5,
       grid: true,
       marginTop: 50,
