@@ -10,3 +10,7 @@ Para complementar la informacion del grafico anterior, en la siguiente represent
 ## Gráfico 4:
 Finalmente el ultimo grafico fue creado con el objetivo de exponer el canal utilizado por las personas cuyas pedidos de desratizacion nunca fueron atendidos, utilizamos un mapa con puntos para mostrar la localizacion del pedido e hicimos uso de los colores para diferenciar entre el uso de la App o de la Web , tambien hicimos un color de los puntos adicional para representar todos los otros canalas y los titulamos como "otro" ya que los dos canales anteriormente mencionados predominan en el mapa.
 ## Conclusón:
+Podemos concluir que hay un gran numero de peticiones que permanecen no resueltas, teniendo una alta concentración al mediodía y 
+originandose principalmente en Palermo, Caballito y Villa Urquiza. El alto tráfico de demandas por la web podría explicar su no resolución, 
+muy probablemente el servicio web se caiga. Inferimos entonces que si se quiere una mayor probabilidad de resolución, se debe realizar el reclamo 
+por la aplicación o en su defecto alguno de los otros canales.
