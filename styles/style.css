@@ -6,12 +6,17 @@
 */
 
 * {
-    font-family:'Times New Roman', Times, serif
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 body {
-    margin: 60px;
+    margin: 0px;
 }
-
+section {
+    margin-top: 60px;
+    margin-right: 250px;
+    margin-left: 250px;
+    margin-bottom: 60px;
+}
 /*Titulos*/
 header {
     background-color: #C4195D;
@@ -19,9 +24,6 @@ header {
     width: 100%;
     position: absolute;
     top: 0;
-    margin: -8px;
-    margin-left: -68px;
-    padding: 15px;
 
 }
 
@@ -37,13 +39,14 @@ h1 {
 }
 
 h3 {
-    font-family: 'Times New Roman', Times, serif;
     margin-top: 50px;
     font-size: 25px;
     color: #C4195D;
     font-weight: bold;
 }
-
+p {
+    line-height: 25px;
+}
 ::marker {
     color: transparent;
 }
@@ -65,8 +68,8 @@ h3 {
 
 #buscador {
     position: relative;
-    margin: 60px;
-    margin-left: 200px;
+    margin-top: 60px;
+    margin-left: 300px;
     background-color: white;
     color: grey;
     padding-left: 20px;
@@ -75,6 +78,7 @@ h3 {
     border-radius: 25px;
     width: 400px;
     text-align: left;
+    font-family: 'Times New Roman', Times, serif
 }
 #lupita {
     color: grey;
@@ -90,11 +94,12 @@ h3 {
     background-color: #C4195D;
     color: white;
     width: 100%;
-    position: absolute;
-    margin: -8px;
-    margin-left: -68px;
-    padding: 15px;
-    padding-left:60px;
+    padding-top: 20px;
+
+}
+i {
+    padding-top: 10px;
+    margin-left: 330px;
 }
 img {
     height:150px;
