@@ -9,18 +9,19 @@
     font-family:'Times New Roman', Times, serif
 }
 body {
-    margin: 40px;
+    margin: 60px;
 }
+
 /*Titulos*/
 header {
     background-color: #C4195D;
     color: white;
     text-align: center;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     margin: -8px;
-    margin-left: -48px;
+    margin-left: -68px;
     padding: 15px;
 }
 
@@ -85,19 +86,19 @@ h3 {
     margin-bottom: 3em;
     background-color: transparent; 
 }
-
+#piso {
+    background-color: #C4195D;
+    color: white;
+    width: 100%;
+    position: absolute;
+    margin: -8px;
+    margin-left: -68px;
+    padding: 15px;
+    padding-left:60px;
+}
 img {
     height:150px;
     width: 150px;
     margin: 10px;
     margin-top: 0px;;
-
-}
-#center.ytd-masthead {
-    display: flexbox;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex: 0 1 728px;
-    min-width: 0px;
 }

@@ -10,7 +10,8 @@ d3.dsv(';', 'data/147_desratizacion.csv', d3.autoType).then(data => {
       marginLeft: 150,
       insetRight: 40,
       x : {
-        label: 'Estado del contacto'
+        label: 'Estado del contacto',
+        labelOffset: 30,
       },
       y : {
         label: null,
@@ -19,8 +20,8 @@ d3.dsv(';', 'data/147_desratizacion.csv', d3.autoType).then(data => {
         Plot.barX(data.filter(d => d.estado_del_contacto == "Abierto"), Plot.group({x: 'count'}, {
             x: 'canal',
             y: 'domicilio_barrio',
-            fill: d => (d.domicilio_barrio == 'PALERMO' ? '#C4195D': 'grey'),
-            stroke: d => (d.domicilio_barrio == 'PALERMO' ? '#C4195D': 'grey'),
+            fill: d => (d.domicilio_barrio == 'PALERMO' ? '#C4195D': '#c4babe'),
+            stroke: d => (d.domicilio_barrio == 'PALERMO' ? '#C4195D': '#c4babe'),
             sort : {y: 'x', reverse : true}
         })),
         Plot.text(data.filter(d => d.estado_del_contacto == "Abierto"), Plot.group({x: 'count'}, {
@@ -31,10 +32,7 @@ d3.dsv(';', 'data/147_desratizacion.csv', d3.autoType).then(data => {
           dy: -628,
           dx: 1735,
         })),
-      ],
-      color : {
-        scheme: 'set2',
-      }
+      ], 
     })
     
     d3.select('#chart04').append(() => chart)

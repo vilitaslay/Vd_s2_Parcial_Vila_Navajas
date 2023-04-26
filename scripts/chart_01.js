@@ -8,8 +8,8 @@ d3.dsv(';', 'data/147_desratizacion.csv', d3.autoType).then(data => {
     console.log(data)
 
     let chart = Plot.plot({
-      height: 800,
-      width: 800,
+      height: 600,
+      width: 600,
       padding: 0.1,
       grid: true,
       marginTop: 50,
@@ -23,17 +23,12 @@ d3.dsv(';', 'data/147_desratizacion.csv', d3.autoType).then(data => {
         label: null
       },
       marks : [
-        Plot.cell(data, Plot.group({fill: "count"}, {
+        Plot.cell(data.filter(d => d.estado_del_contacto == "Abierto"), Plot.group({fill: "count"}, {
           x: 'solo_hora_ingreso',
           y: 'domicilio_barrio',
           fill: 'prestacion',
           fillOpacity: 1,
         })),
-        // Plot.text(data, Plot.group({text:"count"},{
-        //   x: 'hora_new',
-        //   y: 'domicilio_barrio',
-        //   text: 'prestacion',
-        // }),
       ],
       color : {
         type: 'linear',
