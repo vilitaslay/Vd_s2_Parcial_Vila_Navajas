@@ -2,35 +2,38 @@ d3.dsv(';', 'data/147_desratizacion.csv', d3.autoType).then(data => {
   console.log(data)
 
     let chart = Plot.plot({
-      height: 500,
-      width: 1100,
+      height: 700,
+      width: 1200,
       padding: 0.5,
-      grid: true,
-      marginTop: 50,
-      marginLeft: 150,
-      insetRight: 40,
+      marginBottom: 100,
+      marginRight: 60,
+      marginTop: 40,
+      insettop: 70,
       x : {
-        label: 'Estado del contacto',
+        label: null,
         labelOffset: 30,
+        tickRotate: 45,
       },
       y : {
-        label: null,
+        label: "Cantidad de casos sin resolver",
+        labelOffset: 30,
+        domain: [0, 130],
       },
       marks : [
-        Plot.barX(data.filter(d => d.estado_del_contacto == "Abierto"), Plot.group({x: 'count'}, {
-            x: 'canal',
-            y: 'domicilio_barrio',
+        Plot.barY(data.filter(d => d.estado_del_contacto == "Abierto"), Plot.group({y: 'count'}, {
+            x: 'domicilio_barrio',
+            y: 'canal',
             fill: d => (d.domicilio_barrio == 'PALERMO' ? '#E2459B': '#DAC4E0'),
             stroke: d => (d.domicilio_barrio == 'PALERMO' ? '#E2459B': '#DAC4E0'),
-            sort : {y: 'x', reverse : true}
+            sort : {x: 'y', reverse : true}
         })),
-        Plot.text(data.filter(d => d.estado_del_contacto == "Abierto"), Plot.group({x: 'count'}, {
-          x: 'canal',
-          y: 'domicilio_barrio',
+        Plot.text(data.filter(d => d.estado_del_contacto == "Abierto"), Plot.group({y: 'count'}, {
+          x: 'domicilio_barrio',
+          y: 'canal',
           text: ['126'],
           fill: '#E2459B',
-          dy: -623,
-          dx: 1735,
+          dy: -535,
+          dx: -953,
         })),
       ], 
     })
